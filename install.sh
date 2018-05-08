@@ -40,6 +40,9 @@ ASSUME_ROLE=""
 USERADD_PROGRAM=""
 USERADD_ARGS=""
 
+# OH addition - pin the repo version
+REPO_VERSION="v1.7.0-oh"
+
 while getopts :hva:i:l:s: opt
 do
     case $opt in
@@ -97,7 +100,8 @@ tmpdir=$(mktemp -d)
 
 cd "$tmpdir"
 
-git clone -b master https://github.com/widdix/aws-ec2-ssh.git
+# OH Changes - clone down a specific version tag, also clone down the OH fork for increased safety/reliability
+git clone -b $REPO_VERSION https://github.com/contextmedia/aws-ec2-ssh.git 
 
 cd "$tmpdir/aws-ec2-ssh"
 
