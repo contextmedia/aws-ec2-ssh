@@ -41,7 +41,7 @@ USERADD_PROGRAM=""
 USERADD_ARGS=""
 
 # OH addition - pin the repo version
-REPO_VERSION="oh-1.7.0"
+REPO_VERSION="v1.7.0-oh"
 
 while getopts :hva:i:l:s: opt
 do
